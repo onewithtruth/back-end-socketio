@@ -1,8 +1,10 @@
-var app = require('express')();
-var http = require('http').createServer(app);
+const app = require('express')();
+const http = require('http').createServer(app);
 const PORT = 8080;
-var io = require('socket.io')(http);
-var STATIC_CHANNELS = [{
+const io = require('socket.io')(http);
+
+
+const STATIC_CHANNELS = [{
     name: 'Global chat',
     participants: 0,
     id: 1,
